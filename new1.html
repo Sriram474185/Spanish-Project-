@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventos Españoles</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      animation: fadeInBody 1s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 3em 0;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    nav {
+      background-color: #b71c1c;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 1em;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #d32f2f;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #d32f2f;
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul li a {
+      padding: 0.75em 1em;
+      color: white;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav ul ul li a:hover {
+      background-color: #c62828;
+      transform: translateX(5px);
+    }
+
+    .container {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #b71c1c;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section {
+      margin-bottom: 2em;
+      padding: 1em;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    section img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #f0f0f0;
+      margin-top: 2em;
+    }
+
+    pre {
+      font-size: 1.2em;
+    }
+
+
+    /* Menu icon styling */
+    .menu-icon {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .menu-icon div {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    /* Side navigation */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+      overflow-x: hidden;
+      transition: width 0.4s ease;
+      padding-top: 60px;
+      z-index: 2;
+    }
+
+    .side-menu.open {
+      width: 250px;
+    }
+
+    .side-menu a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-menu a:hover {
+      background-color: #575757;
+    }
+
+    .content {
+      padding: 4em 2em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1></h1>
+    <p></p>
+  </header>
+
+  <!-- Menu icon -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="home.html">Home</a>
+    <a href="new1.html">Inventos Españoles</a>
+    <a href="spanishProject2.html">Miembros del Grupo</a>
+    
+  </div>
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Inventos Españoles</h1>
+    <p>Descubre las innovaciones que España ha aportado al mundo</p>
+  </header>
+
+
+  <!-- Menu icon -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="Index.html">Home</a>
+    <a href="spanishProject2.html">Miembros del Grupo</a>
+    <a href="spanishProject2.html">Mentor</a>
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Inventos</a>
+        <ul>
+          <li><a href="#submarino">Submarino</a></li>
+          <li><a href="#giroplano">Giroplano</a></li>
+          <li><a href="#teleferico">Teleférico</a></li>
+          <li><a href="#guitarra">Guitarra Clásica</a></li>
+          <li><a href="#traje">Traje Espacial</a></li>
+          <li><a href="#jeringa">Jeringuilla</a></li>
+          <li><a href="#planetario">Planetarios</a></li>
+          <li><a href="#chupachups">Chupa Chups</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="submarino">
+      <h2>1. El Submarino</h2>
+      <img src="1024px-Submarino_de_Isaac_Peral.jpg" alt="Spanish Submarine" width="600" height="500">
+      <h3><p>El submarino es inventado por Narcís Monturiol en 1859 en España. Lo crea para explorar bajo el agua sin peligro. Su invento se llama Ictíneo. Funciona con vapor y permite a las personas ir a grandes profundidades. Hoy en día, los submarinos se usan para la exploración científica y misiones militares. La idea de Monturiol es muy avanzada para su época e inspira el desarrollo de submarinos modernos.</p></h3> 
+    </section>
+
+    <section id="giroplano">
+      <h2>2. El Giroplano</h2>
+      <img src="editor_images_1537371605618-6522752487_1700d3b40f_z.jpg" alt="Autogyro" width="500" height="500">
+           <h3> <p>Juan de la Cierva inventa el giroplano en 1923 en España. Es un tipo de aeronave con un rotor libre que gira y le permite volar a baja velocidad con seguridad. El giroplano es diferente del helicóptero y puede aterrizar incluso sin motor. Su invento es importante en la historia de la aviación y se utiliza en operaciones militares y de rescate.</p>
+    </section>
+
+    <section id="teleferico">
+      <h2>3. El Teleférico</h2>
+      <img src="Bundesarchiv_Bild_102-13569,_Bozen,_Drahtseilbahn.jpg" alt="Cable Car" width="300" height="300">
+            <h3>
+                <p>Leonardo Torres Quevedo inventa un tipo de teleférico en 1907. Su invención, el “aerial tramway,” se usa por primera vez en el Monte Ulía, San Sebastián. Más tarde, se instala en las Cataratas del Niágara en 1916. El teleférico es útil para transportar personas por montañas, ríos o zonas turísticas. Su sistema es seguro y eficiente, y se usa en todo el mundo hoy en día.</p>
+            </h3>
+    </section>
+
+    <section id="guitarra">
+      <h2>4. La Guitarra Clásica</h2>
+      <img src="Valencia-VC103.jpg" alt="Spanish Guitar" width="800" height="500">
+            <h3><p>Antonio Torres Jurado es considerado el padre de la guitarra clásica moderna. En los años 1850, construye guitarras con cuerpos más grandes y un sistema de refuerzo en forma de abanico que mejora el sonido. Su diseño se convierte en el estándar para las guitarras clásicas actuales. El instrumento se usa en la música clásica y el flamenco. Gracias a Torres Jurado, la guitarra se convierte en uno de los instrumentos más populares del mundo.</p></h3>
+    </section>
+
+    <section id="traje">
+      <h2>5. Traje Espacial – Escafandra Estratonáutica</h2>
+      <img src="Herreraspacesuit.jpg" alt="Spanish Space Suit" width="500" height="500">
+            <h3><p>Emilio Herrera, un ingeniero español, diseña un traje espacial en 1935. Lo llama “escafandra estratonáutica.” Está hecho para proteger el cuerpo humano a grandes alturas. Aunque no se usa en el espacio en su tiempo, la NASA utiliza diseños similares más tarde. Su trabajo es importante para la exploración espacial y muestra la temprana contribución de España a la tecnología de astronautas.
+            </p>
+    </section>
+
+    <section id="jeringa">
+      <h2>6. La Jeringuilla Desechable</h2>
+      <img src="images (2).jpg" alt="Disposable Syringe" width="500" height="500">
+            <h3><p>En 1975, el ingeniero español Manuel Jalón inventa la jeringuilla desechable. Antes de esto, las jeringuillas eran de vidrio y se usaban muchas veces, lo que podía causar infecciones. Su jeringa de plástico es barata y se puede tirar después de un solo uso. Ayuda a hospitales y médicos a dar inyecciones seguras y previene enfermedades. Su invento salva millones de vidas en todo el mundo.</p> </h3>
+    </section>
+
+    <section id="planetario">
+      <h2>7. Los Planetarios</h2>
+      <img src="paxton-tomko-_ynyDGTzTKU-unsplash.jpg" alt="Planetarium" width="500" height="500">
+      <h3> <p>A principios del siglo XX, el astrónomo español José Comas y Solá contribuye al desarrollo de los planetarios modernos. Son edificios especiales con techos en forma de cúpula donde se proyectan estrellas y planetas. Se usan para enseñar astronomía a estudiantes y al público. Los planetarios ayudan a entender el movimiento de los cuerpos celestes de forma visual y emocionante.</p>
+       </h3>
+    </section>
+
+    <section id="chupachups">
+      <h2>8. Chupa Chups</h2>
+      <img src="chupa-chups-best-of-lollipops-60-piece-tub-candy-warehouse-2.webp" alt="Chupa Chups" width="500" height="500">
+            <h3><p>Enric Bernat inventa Chupa Chups en 1958. Quiere hacer un dulce que los niños puedan comer sin ensuciarse las manos. Crea un caramelo con palo y lo llama “Chupa Chups.” El logo es diseñado por el famoso artista Salvador Dalí. Hoy en día, Chupa Chups se vende en más de 150 países y es un símbolo de la creatividad española.</p>
+               
+                </p></h3>
+    </section>
+  </div>
+
+  
+<!-- JavaScript for menu toggle -->
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>

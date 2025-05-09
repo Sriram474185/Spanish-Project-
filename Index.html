@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventos Españoles</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      animation: fadeInBody 1s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 3em 0;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    nav {
+      background-color: #b71c1c;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 1em;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #d32f2f;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #d32f2f;
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul li a {
+      padding: 0.75em 1em;
+      color: white;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav ul ul li a:hover {
+      background-color: #c62828;
+      transform: translateX(5px);
+    }
+
+    .container {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #b71c1c;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section {
+      margin-bottom: 2em;
+      padding: 1em;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    section img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #f0f0f0;
+      margin-top: 2em;
+    }
+
+    pre {
+      font-size: 1.2em;
+    }
+
+
+    /* Menu icon styling */
+    .menu-icon {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .menu-icon div {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    /* Side navigation */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+      overflow-x: hidden;
+      transition: width 0.4s ease;
+      padding-top: 60px;
+      z-index: 2;
+    }
+
+    .side-menu.open {
+      width: 250px;
+    }
+
+    .side-menu a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-menu a:hover {
+      background-color: #575757;
+    }
+
+    .content {
+      padding: 4em 2em;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header>
+      <h1></h1>
+      <p></p>
+    </header>
+  
+    <!-- Menu icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+      <a href="home.html">Home</a>
+      <a href="new1.html">Inventos Españoles</a>
+      <a href="spanishProject2.html">Miembros del Grupo</a>
+        
+    </div>
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Inventos Españoles</h1>
+      <p>Descubre las innovaciones que España ha aportado al mundo</p>
+    </header>
+  
+  
+    <!-- Menu icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+      <a href="home.html">Home</a>
+      <a href="spanishProject2.html">Inventos Españoles</a>
+      <a href="spanishProject2.html">Miembros del Grupo</a>
+      
+    </div>
+  
+    </nav>
+<body>
+    <center>
+    <div class="container">
+      <h2>Bienvenido a la Página de Inventos Españoles</h2>
+      <h3>España es un importante centro de conocimiento durante la época medieval.</h3>
+      <h3>Desde la Edad de Oro de Al Andalus, el mundo se ha beneficiado de muchos inventos y descubrimientos españoles que hicieron de nuestro mundo un lugar mejor.     </h3>
+      <h3>Desde los chupa chups hasta los submarinos a batería, hemos reunido 8 inventos españoles que cambiaron nuestro mundo. Entre ellos se encuentran maravillas de la ingeniería y momentos eureka que revelan un poco sobre la historia de España y mucho sobre el ingenio humano.</h3>
+      <br><br>
+      <h1>
+      <a href="new1.html">Ver más</a>
+      <br><br></h1>
+      
+    </center>
+    <!-- JavaScript for menu toggle -->
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
+  </body>
